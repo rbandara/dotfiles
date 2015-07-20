@@ -6,3 +6,32 @@ git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="rbandara@bn.com"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+# add the custom aliases
+## enviornments
+# ATG servers
+alias ssh_prod_atg="ssh bncomr@10.237.60.217"
+alias ssh_qa_atg="ssh bncomr@10.239.60.32"
+alias ssh_dev_atg="ssh bncomr@10.237.180.44"
+
+# Java servers
+alias ssh_dev="ssh bndev@dwepdssv01.hq.bn-corp.com"
+alias ssh_prod="ssh bncomr@10.237.81.187"
+alias ssh_qa1="ssh bncomr@tqapdssv01.bnqa.bn-dev.com"
+alias ssh_qa2="ssh bncomr@tqapdssv02.bnqa.bn-dev.com"
+alias ssh_cache_dev="ssh ecom@10.239.248.44"
+alias ssh_cache_qa="ssh ecom@10.239.81.13"
+ 
+alias sftp_prod="sftp bncomr@10.237.60.217"
+alias sftp_qa="sftp bncomr@10.239.60.32"
+alias sftp_dev="sftp bncomr@10.237.180.44"
+
+# servers
+alias jboss="./work/development/jboss-eap-6.1/bin/standalone.sh -b 0.0.0.0" 
+
+# redis sentinel
+alias sentinel='redis-server /usr/local/etc/redis-sentinel.conf --sentinel'
+
+## kafka
+alias kafka='kafka-server-start.sh /usr/local/Cellar/kafka/0.8.2.1/libexec/config/server.properties'
+alias zookeeper='zookeeper-server-start.sh /usr/local/Cellar/kafka/0.8.2.1/libexec/config/zookeeper.properties'
