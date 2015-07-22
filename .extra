@@ -28,10 +28,13 @@ alias sftp_dev="sftp bncomr@10.237.180.44"
 
 # servers
 alias jboss="./work/development/jboss-eap-6.1/bin/standalone.sh -b 0.0.0.0" 
-
+alias logs="cd ~/work/development/jboss-eap-6.1/standalone" 
 # redis sentinel
 alias sentinel='redis-server /usr/local/etc/redis-sentinel.conf --sentinel'
 
 ## kafka
 alias kafka='kafka-server-start.sh /usr/local/Cellar/kafka/0.8.2.1/libexec/config/server.properties'
 alias zookeeper='zookeeper-server-start.sh /usr/local/Cellar/kafka/0.8.2.1/libexec/config/zookeeper.properties'
+
+## Java Home
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
