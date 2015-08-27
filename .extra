@@ -38,3 +38,6 @@ alias zookeeper='zookeeper-server-start.sh /usr/local/Cellar/kafka/0.8.2.1/libex
 
 ## Java Home
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
+## Jboss Home
+export JBOSS_HOME=~/work/development/jboss-eap-6.1/

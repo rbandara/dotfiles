@@ -1,0 +1,12 @@
+export s360_tomcat_home=/Users/txrzb/work/development/apache-tomcat-7.0.55
+export s360_log_location=$s360_tomcat_home/logs
+export s360_log_level=DEBUG
+export s360_storage_localFileSystemLocation=/Users/txrzb/Music/Uploads
+export s360_mongo_host=localhost
+export s360_mongo_port=27017
+export s360_daemon_taskExecutorPoolSize=10
+export s360_daemon_taskSchedulerPoolSize=10   
+export s360_daemon_processAudioDelayInMillis=60000
+export s360_listener_numberOfTrendingAudios=10
+export s360_daemon_trendingAudioProcessingDelayInMillis=300000 
+export s360_daemon_recommendationGenerationDelayInMillis=60000 
