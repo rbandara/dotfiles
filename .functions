@@ -244,3 +244,10 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function gc() {
+     git commit -am "$*"
+}
+function gcp() {
+     git commit -am "$*" && git push
+}
