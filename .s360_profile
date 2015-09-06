@@ -10,3 +10,4 @@ export s360_daemon_processAudioDelayInMillis=60000
 export s360_listener_numberOfTrendingAudios=10
 export s360_daemon_trendingAudioProcessingDelayInMillis=300000 
 export s360_daemon_recommendationGenerationDelayInMillis=60000 
+export s360_mahout_inputPath=/Users/txrzb/mahout
