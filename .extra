@@ -16,19 +16,36 @@ alias ssh_dev_atg="ssh bncomr@10.237.180.44"
 
 # Java servers
 alias ssh_dev="ssh bndev@dwepdssv01.hq.bn-corp.com"
-alias ssh_prod="ssh bncomr@10.237.81.187"
+alias ssh_prod1="ssh bncomr@10.237.81.187"
+alias ssh_prod2="ssh bncomr@10.237.81.188"
+alias ssh_prod3="ssh bncomr@10.237.61.192"
+alias ssh_prod4="ssh bncomr@10.237.61.193"
+alias ssh_qa1="ssh bncomr@tqapdssv01.bnqa.bn-dev.com"
+alias ssh_qa1="ssh bncomr@tqapdssv01.bnqa.bn-dev.com"
 alias ssh_qa1="ssh bncomr@tqapdssv01.bnqa.bn-dev.com"
 alias ssh_qa2="ssh bncomr@tqapdssv02.bnqa.bn-dev.com"
-alias ssh_cache_dev="ssh ecom@10.239.248.44"
-alias ssh_cache_qa="ssh ecom@10.239.81.13"
- 
+alias ssh_cache_dev="ssh bndev@10.239.248.44"
+alias ssh_cache_qa1="ssh bndev@10.239.81.13"
+alias ssh_cache_qa2="ssh bndev@10.239.81.14"
+alias ssh_cache_prod1="ssh bncomr@10.237.81.13"
+alias ssh_cache_prod2="ssh bncomr@10.237.81.14"
+alias ssh_cache_prod3="ssh bncomr@10.237.61.196"
+alias ssh_cache_prod4="ssh bncomr@10.237.61.197"
 alias sftp_prod="sftp bncomr@10.237.60.217"
 alias sftp_qa="sftp bncomr@10.239.60.32"
 alias sftp_dev="sftp bncomr@10.237.180.44"
 
+# development
+alias mcip="mvn clean install -Pjboss"
+alias mci="mvn clean install"
+alias gcb="gradle clean build"
+jj="java -jar"
+
 # servers
 alias jboss="./work/development/jboss-eap-6.1/bin/standalone.sh -b 0.0.0.0" 
-alias logs="cd ~/work/development/jboss-eap-6.1/standalone" 
+alias jbossd="./work/development/jboss-eap-6.1/bin/standalone.sh --debug 8000" 
+alias tlog="tail -100f ~/work/development/jboss-eap-6.1/standalone/log/server.log" 
+alias jbh="cd  ~/work/development/jboss-eap-6.1/standalone/log" 
 # redis sentinel
 alias sentinel='redis-server /usr/local/etc/redis-sentinel.conf --sentinel'
 
@@ -36,8 +53,45 @@ alias sentinel='redis-server /usr/local/etc/redis-sentinel.conf --sentinel'
 alias kafka='kafka-server-start.sh /usr/local/Cellar/kafka/0.8.2.1/libexec/config/server.properties'
 alias zookeeper='zookeeper-server-start.sh /usr/local/Cellar/kafka/0.8.2.1/libexec/config/zookeeper.properties'
 
+
 ## Java Home
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
+## Groovy Home
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export PATH=$GROOVY_HOME/bin:$PATH
+
 ## Jboss Home
 export JBOSS_HOME=~/work/development/jboss-eap-6.1/
+
+
+alias jmeter='(sh /Users/txrzb/work/development/jmeter/apache-jmeter-2.12/bin/jmeter.sh -t /Users/txrzb/work/projects/fetch-data-service/src/test/jmeter/fds-all.jmx &)'
+
+# Type safe activator
+export PATH=/Users/txrzb/work/development/activator-dist-1.3.6:$PATH
+
+## Tomcat
+alias tstart="./work/development/apache-tomcat-7.0.55/bin/catalina.sh jpda run;tail -100f ./work/development/apache-tomcat-7.0.55/logs/broadcaster-all.log"
+alias tstop="./work/development/apache-tomcat-7.0.55/bin/shutdown.sh"
+
+# spark settings
+#export MAHOUT_HOME=/Users/txrzb/work/my-projects/opensource/mahout
+#export SPARK_HOME=/usr/local/Cellar/apache-spark/1.6.1/libexec
+#export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+#export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
+#export MASTER=spark://txrzbmacbookpro.hq.bn-corp.com:7077
+# ffmpeg
+export PATH=$PATH:~/.local/bin
+
+# conscript
+export CONSCRIPT_HOME="$HOME/.conscript"
+export CONSCRIPT_OPTS="-XX:MaxPermSize=512M -Dfile.encoding=UTF-8"
+export PATH=$CONSCRIPT_HOME/bin:$PATH
+
+# Couchbase
+export COUCHBASE_HOME=/opt/couchbase
+export COUCHBASE_ROOT_USER=root
+export COUCHBASE_ROOT_PASS=password
+
+export PATH=$COUCHBASE_HOME/bin:$PATH
